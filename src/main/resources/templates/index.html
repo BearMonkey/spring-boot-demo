@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<!-- thymeleaf模板必须引入 -->
+<html xmlns:th="http://www.thymeleaf.org" lang="EN">
+<head>
+    <title>Index</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+<!--<table>-->
+<!--    <thead>-->
+<!--        <tr>-->
+<!--            <th>账号</th>-->
+<!--            <th>姓名</th>-->
+<!--            <th>性别</th>-->
+<!--            <th>操作</th>-->
+<!--        </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--        <tr th:each="user : ${list}">-->
+<!--            <td th:text="${user.username}"></td>-->
+<!--            <td th:text="${user.name}"></td>-->
+<!--            <td th:text="${user.gender}"></td>-->
+<!--            <td th:text="${user.gender}"><a th:href="@{/user/info}"></a></td>-->
+<!--        </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+index
+<div th:each="blog : ${list}">
+    <a th:href="/blog/detail/${blog.id}" th:text="${blog.title}"></a>
+    <span th:text="${blog.author}"></span>
+</div>
+</body>
+</html>
